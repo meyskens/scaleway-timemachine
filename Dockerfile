@@ -1,5 +1,5 @@
-## -*- docker-image-name: "armbuild/scw-app-timemachine:utopic" -*-
-FROM armbuild/scw-app-openvpn:utopic
+## -*- docker-image-name: "scaleway/timemachine:utopic" -*-
+FROM scaleway/openvpn:utopic
 MAINTAINER Scaleway <opensource@scaleway.com> (@scaleway)
 
 
