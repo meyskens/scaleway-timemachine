@@ -4,7 +4,7 @@ VERSION =		latest
 VERSION_ALIASES =	
 TITLE =			TimeMachine
 DESCRIPTION =		TimeMachine (AFPd + Netatalk + OpenVPN)
-SOURCE_URL =		https://github.com/scaleway/image-app-timemachine
+SOURCE_URL =		https://github.com/scaleway-community/scaleway-timemachine
 
 IMAGE_VOLUME_SIZE =	150G
 IMAGE_BOOTSCRIPT =	stable
