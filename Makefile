@@ -1,5 +1,4 @@
-DOCKER_NAMESPACE =	armbuild/
-NAME =			scw-app-timemachine
+NAME =			timemachine
 VERSION =		latest
 VERSION_ALIASES =	
 TITLE =			TimeMachine
