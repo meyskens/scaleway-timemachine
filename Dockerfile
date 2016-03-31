@@ -7,7 +7,7 @@ MAINTAINER Scaleway <opensource@scaleway.com> (@scaleway)
 
 
 # Prepare rootfs for image-builder
-RUN /usr/local/sbin/builder-enter
+RUN /usr/local/sbin/scw-builder-enter
 
 
 # Install packages
@@ -19,8 +19,9 @@ RUN apt-get -q update \
  && apt-get clean
 
 
-RUN useradd -md /backup timemachine
-RUN echo timemachine:timemachine | chpasswd
+# User management
+RUN useradd -md /backup timemachine \
+ && echo timemachine:timemachine | chpasswd
 
 
 # Patch rootfs
@@ -28,4 +29,4 @@ ADD ./overlay/ /
 
 
 # Clean rootfs from image-builder
-RUN /usr/local/sbin/builder-leave
+RUN /usr/local/sbin/scw-builder-leave
