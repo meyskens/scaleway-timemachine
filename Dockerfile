@@ -1,5 +1,8 @@
-## -*- docker-image-name: "scaleway/timemachine:utopic" -*-
-FROM scaleway/openvpn:utopic
+## -*- docker-image-name: "scaleway/timemachine:latest" -*-
+FROM scaleway/openvpn:amd64-latest
+# following 'FROM' lines are used dynamically thanks do the image-builder
+# which dynamically update the Dockerfile if needed.
+#FROM scaleway/openvpn:armhf-latest       # arch=armv7l
 MAINTAINER Scaleway <opensource@scaleway.com> (@scaleway)
 
 
@@ -21,7 +24,7 @@ RUN echo timemachine:timemachine | chpasswd
 
 
 # Patch rootfs
-ADD ./patches/ /
+ADD ./overlay/ /
 
 
 # Clean rootfs from image-builder
